@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Deal Size</title>
+    <link rel="stylesheet" href="static\predict.css">
+</head>
+<body>
+    
+    <video src="static\1110750_Animation_Blurred_3840x2160.mp4" autoplay muted loop></video>
+    <div>
+        <h2>Enter Details for Prediction</h2>
+        <!-- Display flash message for prediction result -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash">
+            <p>{{ messages[0] }}</p>
+        </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST">
+            <label for="ordernumber">Order Number:</label>
+            <input type="number" name="ordernumber" required>
+
+            <label for="quantityordered">Quantity Ordered:</label>
+            <input type="number" name="quantityordered" required>
+
+            <label for="priceeach">Price Each:</label>
+            <input type="number" step="0.01" name="priceeach" required>
+
+            <label for="orderlinenumber">Order Line Number:</label>
+            <input type="number" name="orderlinenumber" required>
+
+            <label for="sales">Sales:</label>
+            <input type="number" step="0.01" name="sales" required>
+
+            <label for="orderdate">Order Date:</label>
+            <input type="date" name="orderdate" required>
+
+            <label for="days_since_lastorder">Days Since Last Order:</label>
+            <input type="number" name="days_since_lastorder" required>
+
+            <label for="status">Status:</label>
+            <input type="text" name="status" required>
+
+            <label for="productline">Product Line:</label>
+            <input type="text" name="productline" required>
+
+            <label for="msrp">MSRP:</label>
+            <input type="number" step="0.01" name="msrp" required>
+
+            <label for="productcode">Product Code:</label>
+            <input type="text" name="productcode" required>
+
+            <label for="customername">Customer Name:</label>
+            <input type="text" name="customername" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" name="phone" required>
+
+            <label for="addressline1">Address Line 1:</label>
+            <input type="text" name="addressline1" required>
+
+            <label for="city">City:</label>
+            <input type="text" name="city" required>
+
+            <label for="postalcode">Postal Code:</label>
+            <input type="text" name="postalcode" required>
+
+            <label for="country">Country:</label>
+            <input type="text" name="country" required>
+
+            <label for="contactlastname">Contact Last Name:</label>
+            <input type="text" name="contactlastname" required>
+
+            <label for="contactfirstname">Contact First Name:</label>
+            <input type="text" name="contactfirstname" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <br>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</body>
+</html>

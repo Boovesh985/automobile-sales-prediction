@@ -29,9 +29,6 @@ automobile-sales-prediction/
 ├── App.py                       # Streamlit prediction dashboard
 ├── loginpage.py                 # Flask app with auth & prediction routes
 ├── Auto Sales data.csv          # Training dataset
-├── Automobile_sales_model.pkl   # Trained Logistic Regression model
-├── label_encoder.pkl            # Saved label encoder for categorical features
-├── database.db                  # SQLite database for user accounts
 ├── requirements.txt             # Python dependencies
 ├── LICENSE                      # MIT License
 ├── templates/
@@ -49,31 +46,38 @@ automobile-sales-prediction/
 └── README.md
 ```
 
+> **Note:** Model artifacts (`*.pkl`) and the SQLite database (`database.db`) are generated at runtime and excluded from version control. See [Getting Started](#-getting-started) for setup instructions.
+
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 ```bash
-pip install flask streamlit scikit-learn pandas matplotlib seaborn
+pip install -r requirements.txt
 ```
 
-### Run the Flask App (with Login)
+### 1. Train the Model
+
+Generate the model and label encoder files before running the app:
+
+```bash
+python MainFile.py
+```
+
+This creates `Automobile_sales_model.pkl` and `label_encoder.pkl`.
+
+### 2. Run the Flask App (with Login)
 
 ```bash
 python loginpage.py
 ```
-Then open `http://127.0.0.1:5000` in your browser.
 
-### Run the Streamlit Dashboard
+Then open `http://127.0.0.1:5000` in your browser. The SQLite database (`database.db`) is created automatically on first run.
+
+### 3. Run the Streamlit Dashboard
 
 ```bash
 streamlit run App.py
-```
-
-### Train the Model
-
-```bash
-python MainFile.py
 ```
 
 ## 📊 ML Pipeline

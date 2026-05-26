@@ -32,6 +32,8 @@ automobile-sales-prediction/
 ├── Automobile_sales_model.pkl   # Trained Logistic Regression model
 ├── label_encoder.pkl            # Saved label encoder for categorical features
 ├── database.db                  # SQLite database for user accounts
+├── requirements.txt             # Python dependencies
+├── LICENSE                      # MIT License
 ├── templates/
 │   ├── login.html               # Login & signup page
 │   └── predict.html             # Prediction form page
@@ -40,6 +42,10 @@ automobile-sales-prediction/
 │   ├── predict.css              # Prediction page styles
 │   ├── Automobile.jpg           # Background image
 │   └── ...                      # Other static assets
+├── screenshots/                 # Application screenshots
+│   ├── login_page.png
+│   ├── prediction_form.png
+│   └── streamlit_dashboard.png
 └── README.md
 ```
 
@@ -78,6 +84,17 @@ python MainFile.py
 4. **Evaluation** — Accuracy score, confusion matrix, and classification report
 5. **Export** — Saves trained model and label encoder as `.pkl` files
 
+## 📸 Screenshots
+
+### Login Page
+![Login Page](screenshots/login_page.png)
+
+### Prediction Form (Flask)
+![Prediction Form](screenshots/prediction_form.png)
+
+### Streamlit Dashboard
+![Streamlit Dashboard](screenshots/streamlit_dashboard.png)
+
 ## 📄 License
 
-© 2025 All Rights Reserved.
+This project is licensed under the [MIT License](LICENSE).

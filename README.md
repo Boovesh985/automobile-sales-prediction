@@ -1,8 +1,8 @@
-# 🚗 Automobile Sales Prediction
+#  Automobile Sales Prediction
 
 A full-stack web application that predicts automobile deal sizes using Machine Learning. Built with **Flask** for the web interface (with user authentication) and **Streamlit** for an interactive dashboard, powered by a **Logistic Regression** model trained on auto sales data.
 
-## 🌟 Features
+##  Features
 
 - **User Authentication** — Signup & Login system with hashed passwords using Flask & SQLite
 - **Sales Prediction** — Predicts deal size (Small / Medium / Large) based on order details
@@ -10,7 +10,7 @@ A full-stack web application that predicts automobile deal sizes using Machine L
 - **ML Pipeline** — Data preprocessing, label encoding, model training, and evaluation
 - **Interactive Forms** — Input order details and get instant deal size predictions
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -21,7 +21,7 @@ A full-stack web application that predicts automobile deal sizes using Machine L
 | **Data Processing** | Pandas, NumPy |
 | **Visualization** | Matplotlib, Seaborn |
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 automobile-sales-prediction/
@@ -48,7 +48,7 @@ automobile-sales-prediction/
 
 > **Note:** Model artifacts (`*.pkl`) and the SQLite database (`database.db`) are generated at runtime and excluded from version control. See [Getting Started](#-getting-started) for setup instructions.
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -80,7 +80,7 @@ Then open `http://127.0.0.1:5000` in your browser. The SQLite database (`databas
 streamlit run App.py
 ```
 
-## 📊 ML Pipeline
+##  ML Pipeline
 
 1. **Data Loading** — Reads `Auto Sales data.csv` with automobile sales records
 2. **Preprocessing** — Handles missing values, applies label encoding to categorical features
@@ -88,7 +88,7 @@ streamlit run App.py
 4. **Evaluation** — Accuracy score, confusion matrix, and classification report
 5. **Export** — Saves trained model and label encoder as `.pkl` files
 
-## 📸 Screenshots
+##  Screenshots
 
 ### Login Page
 ![Login Page](screenshots/login_page.png)
@@ -99,6 +99,6 @@ streamlit run App.py
 ### Streamlit Dashboard
 ![Streamlit Dashboard](screenshots/streamlit_dashboard.png)
 
-## 📄 License
+##  License
 
 This project is licensed under the [MIT License](LICENSE).
